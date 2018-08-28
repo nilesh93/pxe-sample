@@ -2,5 +2,4 @@
 
 demonstrate serverless bridge on github
 
-commit s
-asddasda
+commit 3
