@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.get('/', (req, res) => {
-    res.send('PXE sample app running on dev on Platformer DEMO')
+    res.send('PXE sample app running on dev on Platformer DEMO 123')
 });
 
 app.listen(8080, () => {
