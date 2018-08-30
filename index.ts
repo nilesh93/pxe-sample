@@ -17,5 +17,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(8080, () => {
-    console.log("sample app started       on  http://localhost:8080");
+    console.log("sample app started on  http://localhost:8080");
 });
