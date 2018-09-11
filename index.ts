@@ -1,5 +1,6 @@
 import * as express from "express";
 import { CONFIG } from "./config";
+import { CONFIG_SECRET } from "./config.secret";
 
 const bodyParser = require("body-parser");
 const cookieParser = require('cookie-parser');
@@ -15,9 +16,11 @@ app.use(cookieParser());
 
 app.get('/', (req, res) => {
     res.send(`
-    PXE sample app running DEMO DEMO cloned from github. 
-    DEMO Environment Variable set for [env_name] is: ${process.env.env_name}. 
+    PXE sample app running DEMO cloned from github. 
+    Environment Variable set for [env_name] is: ${process.env.env_name}.
+    Encrypted Environment Variable set for [env_name_secret] is: ${process.env.env_name_secret}. 
     APP VERSION: ${CONFIG.app_version}
+    Encrypted VERSION: ${CONFIG_SECRET.app_version}
     
     `)
 });
