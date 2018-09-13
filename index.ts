@@ -16,11 +16,12 @@ app.use(cookieParser());
 
 app.get('/', (req, res) => {
     res.send(`
-    PXE sample app running DEMO cloned from github. 
-    Environment Variable set for [env_name] is: ${process.env.env_name}.
-    Encrypted Environment Variable set for [env_name_secret] is: ${process.env.env_name_secret}. 
-    APP VERSION: ${CONFIG.app_version}
-    Encrypted VERSION: ${CONFIG_SECRET.app_version}
+    Hello <br>
+    PXE sample app running  cloned from github.  <br>
+    Environment Variable set for [env_name] is: ${process.env.env_name}. <br>
+    Encrypted Environment Variable set for [env_name_secret] is: ${process.env.env_name_secret}. <br>
+    APP VERSION: ${CONFIG.app_version} <br>
+    Encrypted VERSION: ${CONFIG_SECRET.app_version} <br>
     
     `)
 });
