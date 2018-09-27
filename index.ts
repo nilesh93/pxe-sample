@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.get('/', (req, res) => {
-    res.send(`PXE sample app running DEMO DEMO cloned from github. DEMO Environment Variable set for [env_name] is: ${process.env.env_name}`)
+    res.send(`PXE sample app running HELLO cloned from github. DEMO Environment Variable set for [env_name] is: ${process.env.env_name}`)
 });
 
 app.listen(8080, () => {
