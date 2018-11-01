@@ -22,6 +22,7 @@ app.get('/', (req, res) => {
     Encrypted Environment Variable set for [env_name_secret] is: ${process.env.env_name_secret}. <br>
     APP VERSION: ${CONFIG.app_version} <br>
     Encrypted VERSION: ${CONFIG_SECRET.app_version} <br>
+    Platformer image version: ${process.env.PLATFORMER_IMG_TAG}
     
     `)
 });
