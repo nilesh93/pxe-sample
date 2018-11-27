@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.get('/', (req, res) => {
-    res.send('PXE sample app running')
+    res.send('PXE sample app running. Hello mahesh')
 });
 
 app.listen(8080, () => {
