@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-app.use('/uploads',express.static(__dirname + '/uploads'))
+app.use('/uploads', express.static(__dirname + '/uploads'))
 
 app.get('/', async (req, res) => {
     let html = `
@@ -76,7 +76,14 @@ app.listen(8081, () => {
 async function getUploads(html) {
     return new Promise((resolve, reject) => {
         fs.readdir(__dirname + '/uploads/', function (err, items) {
-            console.log(items);
+            if (err) {
+                resolve(html)
+                return;
+            }
+            if (!items) {
+                resolve(html)
+                return;
+            }
             for (var i = 0; i < items.length; i++) {
                 console.log(items[i]);
                 html += `<li> <a href="/uploads/${items[i]}" target="_blank"> ${items[i]} </li>`;
