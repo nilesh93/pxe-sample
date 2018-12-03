@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+app.use('/uploads',express.static(__dirname + '/uploads'))
 
 app.get('/', async (req, res) => {
     let html = `
@@ -67,7 +68,7 @@ app.post('/', function (req, res) {
 });
 
 
-app.listen(8080, () => {
+app.listen(8081, () => {
     console.log("sample app started on  http://localhost:8080");
 });
 
