@@ -20,7 +20,7 @@ app.use('/uploads', express.static(__dirname + '/uploads'))
 app.get('/', async (req, res) => {
     let html = `
     <h2> PXE Basic Info </h2>
-    Hello PXE   Welcome to the Demo on Jan 2019 <br>       
+    Hello PXE   Welcome to the Demo s on Jan 2019 <br>       
     PXE sample app running  cloned from github.  <br>
     Environment Variable set for [env_name] is: ${process.env.env_name}. <br>
     Encrypted Environment Variable set for [env_name_secret] is: ${process.env.env_name_secret}. <br>
