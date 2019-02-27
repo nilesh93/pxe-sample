@@ -18,6 +18,14 @@ app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'))
 
 app.get('/', async (req, res) => {
+
+    fs.appendFile("info.log", "\n Request recieved at - " + new Date(), function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("The file was saved!");
+    });
+
     let html = `
     <h2> PXE Basic Info </h2>
     Hello PXE   Welcome to the Demo  on Jan 26 2019 <br>       
